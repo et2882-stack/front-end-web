@@ -1,0 +1,86 @@
+/* GIVE IT A VOICE
+
+   Do not change the HTML or the words.
+
+   Use CSS to change how this page asks to be read.
+
+   What can you communicate through:
+   - color
+   - typography
+   - scale
+   - contrast
+   - spacing
+   - borders
+   - backgrounds
+   - hierarchy
+
+   You do not need to use everything.
+*/
+
+
+body {
+  text-align: center;
+  background-color: black;
+  color: red;
+}
+
+
+h1 {
+  color: yellow;
+  font-weight: bold;
+  font-family: cursive;
+  text-shadow: 1px 2px red;
+  
+}
+
+
+h2 {
+  color: yellow;
+  text-shadow: 1px 2px red;
+
+}
+
+
+p {
+  
+}
+
+
+.label {
+  color: red;
+}
+
+
+.subtitle {
+  
+}
+
+
+.introduction {
+  
+}
+
+
+.details {
+
+}
+
+
+blockquote {
+
+}
+
+
+.instructions {
+
+}
+
+
+.action {
+
+}
+
+
+footer {
+
+}
