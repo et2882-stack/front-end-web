@@ -1,0 +1,264 @@
+/* --------------------
+   BASIC PAGE SETUP
+-------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+
+/* --------------------
+   HEADER
+-------------------- */
+
+header {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #1c1c1c;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 4px;
+}
+
+header p {
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 18px;
+}
+
+
+/* --------------------
+   MAIN CONTAINER
+-------------------- */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* --------------------
+   SECTIONS
+-------------------- */
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+/* --------------------
+   FEATURED MOVIE
+-------------------- */
+
+/*
+   GRID creates two columns:
+   poster | movie information
+*/
+
+.featured-movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    padding: 30px;
+    background-color: #1c1c1c;
+}
+
+
+/* Fake movie poster */
+
+.poster {
+    min-height: 300px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: #333;
+}
+
+.featured-poster {
+    min-height: 450px;
+    background-color: #292929;
+}
+
+.poster span {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.movie-info {
+    align-self: center;
+}
+
+.movie-info h3 {
+    font-size: 42px;
+    margin-top: 0;
+}
+
+.year {
+    color: #aaa;
+}
+
+.rating {
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+
+/* --------------------
+   FAVORITE MOVIES
+-------------------- */
+
+/*
+   FLEXBOX puts the movie cards
+   beside each other.
+*/
+
+.movie-list {
+    display: flex;
+    gap: 25px;
+}
+
+.movie-card {
+    flex: 1;
+    background-color: #1c1c1c;
+    padding: 20px;
+}
+
+.movie-card h3 {
+    margin-bottom: 5px;
+}
+
+.movie-card p {
+    color: #bbb;
+}
+
+.movie-card .poster {
+    min-height: 250px;
+}
+
+
+/* Different fake poster styles */
+
+.poster-one {
+    background-color: #292929;
+}
+
+.poster-two {
+    background-color: #353535;
+}
+
+.poster-three {
+    background-color: #414141;
+}
+
+.genres {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.genre {
+    padding: 25px;
+    background-color: #1c1c1c;
+}
+
+.genre h3 {
+    font-size: 22px;
+}
+
+.genre ul {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: #bbb;
+}
+
+.movie-night {
+    text-align: center;
+}
+
+
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 20px;
+
+    background-color: #1c1c1c;
+}
+
+.timeline-item strong {
+    font-size: 18px;
+}
+
+.timeline-item span {
+    color: #bbb;
+}
+
+.arrow {
+    font-size: 30px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #777;
+}
+
+
+@media (max-width: 700px) {
+
+    .featured-movie {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-list {
+        flex-direction: column;
+    }
+
+    .genres {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    header h1 {
+        font-size: 35px;
+    }
+}
