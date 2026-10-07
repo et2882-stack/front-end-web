@@ -61,11 +61,21 @@ section h2 {
     padding: 20px;
 
     background-color: #333;
+    transition: 0.25s;
 }
+.poster:hover {
+    background-color: #444;
+}
+
 
 .featured-poster {
     min-height: 450px;
     background-color: #292929;
+    transition: 0.25s;
+}
+
+.featured-poster:hover {
+    background-color: #3a3a3a;
 }
 
 .poster span {
@@ -121,11 +131,11 @@ section h2 {
 }
 
 .poster-two {
-    background-color: #353535;
+    background-color: #292929;
 }
 
 .poster-three {
-    background-color: #414141;
+    background-color: #292929;
 }
 
 .genres {
