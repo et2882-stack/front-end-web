@@ -28,7 +28,6 @@ header p {
     font-size: 18px;
 }
 
-/* Main layout */
 main {
     width: 90%;
     max-width: 1100px;
@@ -44,7 +43,6 @@ section h2 {
     font-size: 30px;
 }
 
-/* Featured movie */
 .featured-movie {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,7 +51,6 @@ section h2 {
     background-color: #1c1c1c;
 }
 
-/* Movie posters */
 .poster {
     min-height: 300px;
     display: flex;
@@ -63,20 +60,18 @@ section h2 {
     background-color: #333;
     overflow: hidden;
 
-    /* Smooth response to visitor interaction */
     transition: background-color 0.3s ease,
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
 }
 
-/* PSEUDO-CLASS: poster responds to hover */
+
 .poster:hover {
     background-color: #444;
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Keep poster images responsive */
 .poster img {
     display: block;
     max-width: 100%;
@@ -87,7 +82,6 @@ section h2 {
                 filter 0.4s ease;
 }
 
-/* TRANSFORM: poster image moves closer */
 .poster:hover img {
     transform: scale(1.05);
     filter: brightness(1.1);
@@ -99,12 +93,10 @@ section h2 {
     text-align: center;
 }
 
-/* Featured poster */
 .featured-poster {
     min-height: 450px;
     background-color: #292929;
 
-    /* ANIMATION: subtle glow */
     animation: movie-glow 4s ease-in-out infinite;
 }
 
@@ -119,7 +111,6 @@ section h2 {
     transform: scale(1.02);
 }
 
-/* CSS animation for the featured film */
 @keyframes movie-glow {
     0%, 100% {
         box-shadow: 0 0 0 rgba(180, 150, 100, 0);
@@ -130,7 +121,6 @@ section h2 {
     }
 }
 
-/* Featured movie information */
 .movie-info {
     align-self: center;
 }
@@ -149,7 +139,6 @@ section h2 {
     letter-spacing: 3px;
 }
 
-/* Favorite movies */
 .movie-list {
     display: flex;
     gap: 25px;
@@ -161,13 +150,11 @@ section h2 {
     background-color: #1c1c1c;
     padding: 20px;
 
-    /* Smooth card interaction */
     transition: transform 0.3s ease,
                 background-color 0.3s ease,
                 box-shadow 0.3s ease;
 }
 
-/* PSEUDO-CLASS: cards lift when encountered */
 .movie-card:hover {
     transform: translateY(-8px);
     background-color: #242424;
@@ -179,7 +166,6 @@ section h2 {
     transition: color 0.3s ease;
 }
 
-/* PSEUDO-CLASS: movie title changes color */
 .movie-card:hover h3 {
     color: #e4bd83;
 }
@@ -198,7 +184,6 @@ section h2 {
     background-color: #292929;
 }
 
-/* Movies by genre */
 .genres {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -220,7 +205,6 @@ section h2 {
     color: #bbb;
 }
 
-/* Movie night timeline */
 .movie-night {
     text-align: center;
 }
@@ -252,7 +236,6 @@ section h2 {
     font-size: 30px;
 }
 
-/* Footer */
 footer {
     padding: 30px;
     text-align: center;
