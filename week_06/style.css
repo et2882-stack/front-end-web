@@ -206,6 +206,24 @@ body {
   background: var(--pale-pink);
 }
 
+.music-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.music-item img {
+  width: min(35%, 190px);
+  aspect-ratio: 1.28 / 1;
+  object-fit: cover;
+  image-rendering: pixelated;
+  background: var(--pale-pink);
+}
+
+.music-item h3 { margin: 0 0 5px; }
+.music-item p { margin: 0; }
+
 .work-item h3 { margin: 0 0 5px; }
 .work-item p { margin: 0; }
 
