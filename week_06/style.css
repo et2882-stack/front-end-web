@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=VT323&display=swap');
+
+:root {
+  --ink: #26354e;
+  --window-blue: #d4eaff;
+  --bar-blue: #a8d7ff;
+  --pink: #f7a6e8;
+  --pale-pink: #ffeafa;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #1d1d1d;
+  color: #090b12;
+  font-family: "Pixelify Sans", monospace;
+}
+
+.desktop {
+  position: relative;
+  width: min(100vw, 1600px);
+  height: 100dvh;
+  min-height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--pale-pink);
+  background-image: url("assets/background.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+.desktop-icons {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 74px;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 70px;
+  color: #090b12;
+  text-decoration: none;
+  text-shadow: 1px 1px var(--pale-pink);
+}
+
+.desktop-icon img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  transition: transform 120ms ease;
+}
+
+.desktop-icon span {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.desktop-icon:hover img,
+.desktop-icon:focus-visible img {
+  transform: translateY(-2px);
+}
+
+.desktop-icon:focus-visible {
+  outline: 2px dashed var(--ink);
+  outline-offset: 3px;
+}
+
+.window {
+  position: absolute;
+  z-index: 3;
+  top: 2%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  width: 72%;
+  height: 88%;
+  min-width: 280px;
+  min-height: 280px;
+  border: 3px solid var(--ink);
+  background: var(--window-blue);
+  box-shadow: 4px 4px 0 rgba(30, 37, 57, .25);
+}
+
+.title-bar {
+  flex: 0 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  padding: 3px 5px 3px 12px;
+  border-bottom: 3px solid var(--ink);
+  background: var(--bar-blue);
+}
+
+.title-bar h1 {
+  overflow: hidden;
+  margin: 0;
+  font-family: "VT323", monospace;
+  font-size: 27px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.close-button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+}
+
+.close-button img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.close-button:hover {
+  background: rgba(255,255,255,.45);
+}
+
+.window-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: clamp(12px, 2.5vw, 28px);
+  background: var(--window-blue);
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card { min-width: 0; }
+
+.project-card > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.28 / 1;
+  object-fit: cover;
+  image-rendering: pixelated;
+  background: var(--pale-pink);
+}
+
+.project-card h2 {
+  margin: 6px 0 2px;
+  font-size: 17px;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.works-content {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.works-content h2 { margin-top: 0; }
+
+.work-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.work-item img {
+  width: min(35%, 190px);
+  aspect-ratio: 1.28 / 1;
+  object-fit: cover;
+  image-rendering: pixelated;
+  background: var(--pale-pink);
+}
+
+.work-item h3 { margin: 0 0 5px; }
+.work-item p { margin: 0; }
+
+@media (max-width: 650px) {
+  .desktop { min-height: 480px; }
+  .desktop-icons { left: 4px; width: 64px; }
+  .desktop-icon { width: 60px; }
+  .desktop-icon img { width: 46px; height: 46px; }
+  .desktop-icon span { font-size: 10px; }
+  .window {
+    left: 76px;
+    top: 5%;
+    width: calc(100% - 86px);
+    height: 88%;
+    min-width: 0;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .window-content { padding: 12px; }
+}
