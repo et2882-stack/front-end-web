@@ -1,17 +1,38 @@
+
 body {
     font-family: Arial, sans-serif;
-    background: #f0eee8;
+    background-color: #f0eee8;
     color: #222;
     margin: 0;
-    padding: 60px;
+    padding: 60px 20px;
+    transition: background-color 0.5s;
 }
 
 main {
     max-width: 700px;
     margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: darkgreen;
+    transition: color 0.5s;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 button {
     padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: darkgreen;
+    color: white;
     cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
 }
