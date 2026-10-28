@@ -1,0 +1,25 @@
+body{
+    background-color: tan;
+}
+
+#domino-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.domino-face{
+    font-size: 20px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    width: 3em;
+    height: 3em;
+}
+
+.domino pip{
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+}
