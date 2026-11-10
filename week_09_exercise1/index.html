@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="sketch.js" defer></script>
 </head>
+
 <body>
-    <button type="button" id="change-color">Change Color</button>
-    <button type="button" id="reset">Reset</button>
-    
+
+    <h1>Color Playground</h1>
+    <p>Choose a color or generate a random one!</p>
+    <div id="controls">
+        <button type="button" id="change-color">
+            Random Color
+        </button>
+        <form id="color-form">
+            <label for="color-picker">Choose your own color:</label>
+            <input type="color" id="color-picker" value="#ffffff">
+            <button type="submit" id="apply-color">
+                Apply Color
+            </button>
+        </form>
+        <button type="button" id="reset">
+            Reset
+        </button>
+    </div>
+    <p id="message">Welcome! Try changing the background color.</p>
 </body>
 </html>
