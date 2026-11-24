@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class = "site-shell">
+        <header class = "site-header"></header>
+            <p class = "eyebrow">A PERSONAL FILM ARCHIVE</p>
+        </header>
+
+        <nav class = "movie-tabs" id="movie-tabs">
+            <p>Loading movies...</p>
+        </nav>
+
+        <section class = "movie-layout">
+            <article class = "movie-information">
+                <div class = "poster-frame">
+                    <img id = "movie-poster" src = "" alt="" hidden>
+                    <div id = "poster-placeholder" class = "poster-placeholder">
+                        MOVIE <br>POSTER
+                    </div>
+                </div>
+
+                <h2 id = "movie-title">Movie Title</h2>
+                <p class = "director">
+                    Directed by <span id = "movie-director">Director</span>
+                </p>
+                <p id = "movie-synopsis" class = "synopsis">
+                    Movie synopsis goes here.
+                </p>
+            </article>
+
+            <aside class = "rating-panel">
+                <h2>Rating:</h2>
+                <div class = "rating-row">
+                    <span class = "rating-label">Emma's rating:</span>
+                    <div class="rating-track">
+                        <div id="emma-rating-bar" class="rating-fill emma-fill"></div>
+                    </div>
+                    <strong id= "emma-rating-value">-</strong>
+                </div>
+
+                <div class = "rating-row">
+                    <span class = "rating-label">Letterboxd:</span>
+                    <div class="rating-track">
+                        <div id="letterboxd-rating-bar" class="rating-fill letterboxd-fill"></div>
+                    </div>
+                    <strong id = "letterboxd-rating-value">-</strong>
+                </div>
+                <p class = "rating-note">Ratings are shown out of 5.0</p>
+            </aside>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
